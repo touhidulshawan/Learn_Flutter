@@ -10,11 +10,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var questionIndex = 0;
+  var _questionIndex = 0;
 
-  void handlePress() {
+  void _handlePress() {
     setState(() {
-      questionIndex += 1;
+      _questionIndex += 1;
     });
   }
 
@@ -32,10 +32,10 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Personality Test App'),
         ),
         body: Column(children: [
-          Text(questions[questionIndex]),
-          ElevatedButton(onPressed: handlePress, child: const Text('Red')),
-          ElevatedButton(onPressed: handlePress, child: const Text('Green')),
-          ElevatedButton(onPressed: handlePress, child: const Text('Blue')),
+          Text(questions[_questionIndex]),
+          ElevatedButton(onPressed: _handlePress, child: const Text('Red')),
+          ElevatedButton(onPressed: _handlePress, child: const Text('Green')),
+          ElevatedButton(onPressed: _handlePress, child: const Text('Blue')),
         ]),
       ),
     );
