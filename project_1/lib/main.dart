@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './question.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,6 +9,7 @@ class MyApp extends StatefulWidget {
   @override
   State<MyApp> createState() => _MyAppState();
 }
+
 
 class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
@@ -32,7 +34,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Personality Test App'),
         ),
         body: Column(children: [
-          Text(questions[_questionIndex]),
+          Question(questions[_questionIndex]),
           ElevatedButton(onPressed: _handlePress, child: const Text('Red')),
           ElevatedButton(onPressed: _handlePress, child: const Text('Green')),
           ElevatedButton(onPressed: _handlePress, child: const Text('Blue')),
